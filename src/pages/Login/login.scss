@@ -1,0 +1,184 @@
+@import url('../../variables.scss');
+
+:root {
+  font-family: Mark Pro;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 960px 960px;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+
+  background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
+  background-size: 100%;
+}
+
+.section-2 {
+  background-image: url("../../../public/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ola {
+  font-size: 60px;
+  line-height: 76.05px;
+  color: #e0e0e0;
+
+  margin-top: 197px;
+  margin-bottom: 17px;
+  padding-left: 287px;
+}
+
+.paragraph-login {
+  width: 301px;
+  height: 52px;
+
+  font-family: Mark Pro;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e0e0e0;
+
+  margin-bottom: 97px;
+  padding-left: 287px;
+}
+
+.title-login {
+  width: 81px;
+  height: 38px;
+
+  font-family: Mark Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  color: #e0e0e0;
+  padding-left: 287px;
+}
+
+.wraper-input {
+  display: flex;
+  align-items: center;
+
+  margin-top: 33px;
+  padding-left: 287px;
+}
+
+label {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e0e0e0;
+}
+
+.input {
+  width: 379px;
+  height: 60px;
+  box-sizing: border-box;
+  position: relative;
+
+  background: #26292c;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  outline: 0;
+
+  font-family: Mark Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #e0e0e0;
+
+  padding-left: 20px;
+}
+
+.input:invalid {
+  border: #e9b425 1px solid;
+}
+
+.input:valid {
+  border: #fff 1px solid;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #26292c inset;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #e0e0e0 !important;
+}
+
+.wraper-button {
+  padding-left: 287px;
+}
+
+.button-login {
+  width: 379px;
+  height: 67px;
+  border: none;
+  background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+
+  font-family: Mark Pro Bold;
+  color: #ffffff;
+  font-size: 18px;
+
+  margin-top: 115px;
+  
+
+  cursor: pointer;
+}
+
+.logo-compass {
+  height: 100%;
+  display: block;
+}
+
+.logo-compass {
+  width: 306;
+  height: 69px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.locker {
+  width: 20px;
+  height: 25px;
+}
+
+.user {
+  width: 20px;
+}
+
+.icon-input {
+  margin-left: 18px;
+
+}
+
+.error-input {
+  font-family: Mark Pro Bold;
+  display: block;
+  font-size: 16px;
+  color: #e9b425;
+  line-height: 20px;
+
+  width: 283px;
+  height: 40px;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  padding-left: 0;
+
+  margin-top: 28px;
+
+}
+

@@ -1,174 +1,185 @@
-@font-face {
-  font-family: "Mark Pro";
-  src: url(../../../fonts/MarkPro.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Mark Pro Bold";
-  src: url(../../../fonts/MarkProBold.ttf);
-  font-weight: 700;
-}
-
-:root {
-  font-family: Mark Pro;
-  
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 960px 960px;
-
-}
-
-.section-1 {
+header {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding-left: 287px;
+  justify-content: space-between;
 
-  background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
-  background-size: 100%;
+  padding-top: 25px;
 
+  .logo-compass-pequeno {
+    width: 150px;
+    height: 42.75px;
+
+    margin-left: 40px;
+  }
+
+  .clock {
+    text-align: center;
+    .hour {
+      font-family: "Mark Pro Bold";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 144px;
+      text-align: center;
+
+      color: #222222;
+    }
+
+    .day {
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+
+      text-align: center;
+
+      color: #222222;
+    }
+  }
+
+  .wraper-weather {
+    margin-right: 41px;
+
+    .place {
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+
+      color: #222222;
+    }
+    .wraper-weather-temperature {
+      display: flex;
+      align-items: center;
+
+      .cloud {
+        margin-right: 12px;
+      }
+
+      .temperature {
+        font-family: "Mark Pro Bold";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        text-align: center;
+
+        color: #222222;
+      }
+    }
+  }
 }
 
-
-.section-2 {
-  background-image: url("../../../public/images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-h1 {
-  font-size: 60px;
-  line-height: 76.05px;
-  color: #e0e0e0;
-
-  margin-top: 197px;
-  margin-bottom: 17px;
-}
-
-p {
-  width: 301px;
-  height: 52px;
-
-  font-family: Mark Pro;
-  font-size: 16px;
-  line-height: 20px;
-  color: #e0e0e0;
-
-  margin-bottom: 97px;
-}
-
-.form {
+main {
   display: flex;
-  flex-direction: column;
+
+  .ball-uol {
+  }
+
+  .section-frases {
+    margin-right: 10vw;
+    margin-top: 166px;
+    .title-eng {
+      color: #c12d18;
+
+      font-family: "Mark Pro Bold";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      text-align: right;
+    }
+    .title-pt {
+      color: #222222;
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      text-align: right;
+    }
+
+    .section-frases {
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+  }
 }
 
-h2 {
-  width: 81px;
-  height: 38px;
-
-  font-family: Mark Pro;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 38px;
-  color: #e0e0e0;
-}
-
-.wraper-input {
+footer {
   display: flex;
   align-items: center;
+  height: 9.4vh;
+  width: 100vw;
+  padding-left: 16%;
 
-  margin-top: 33px;
-}
+  background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
 
-label {
-  font-family: "Mark Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #e0e0e0;
+  .paragraph-footer {
+    font-family: "Mark Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    color: #ffffff;
 
-}
+    width: 541px;
+  }
 
-input {
-  width: 379px;
-  height: 60px;
-  box-sizing: border-box;
-  position: relative;
+  .white-line {
+    margin-left: 3%;
+    margin-right: 7%;
+  }
 
-  background: #26292c;
-  border: 1px solid #ffffff;
-  border-radius: 50px;
-  outline: 0;
+  .text-refresh {
+    font-family: "Mark Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    color: #ffffff;
 
+    margin-right: 2%;
+  }
 
-  font-family: Mark Pro;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .timer {
+    font-family: "Mark Pro Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: #ffffff;
 
-  color: #e0e0e0;
+  }
 
-  padding-left: 20px;
-}
+  .seconds {
+    font-family: "Mark Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    
+  }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #26292c inset;
-}
+  .btn-footer {
+    height: 9.4vh;
+    width: 10%;
+    border: none;
+  }
 
-button {
-  width: 379px;
-  height: 67px;
-  border: none;
-  background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
-  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
+  .btn-white {
+    background: #ffffff;
+  }
 
-  font-family: Mark Pro Bold;
-  color: #ffffff;
-  font-size: 18px;
+  .btn-black {
+    background-color: transparent;
 
-  margin-top: 115px;
-
-  cursor: pointer;
-}
-
-img {
-  height: 100%;
-  display: block;
-}
-
-
-
-.logo-compass {
-  width: 306;
-  height: 69px;
-  margin: auto;
-  margin-top: 35px;
-}
-
-.icon-input {
-  margin-left: 18px;
-
-  position: relative;
-}
-
-.locker {
-  width: 20px;
-  height: 25px;
-}
-
-.user {
-  width: 20px;
-
-}
-
-input:focus ~ .icon-input{
-  transform: rotateX(3.142rad);
-  transition-delay: 2s;
+    font-family: "Mark Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
 }
