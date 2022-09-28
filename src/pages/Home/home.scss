@@ -36,7 +36,7 @@ header {
   }
 
   .wraper-weather {
-    margin-right: 41px;
+    margin-right: 3%;
 
     .place {
       font-family: "Mark Pro";
@@ -70,12 +70,19 @@ header {
 
 main {
   display: flex;
+  justify-content: space-between;
+  margin-right: 8%;
 
   .ball-uol {
+    position: relative;
+    z-index: -10;
+    top: 70px;
   }
 
   .section-frases {
-    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
     margin-top: 166px;
     .title-eng {
       color: #c12d18;
@@ -95,91 +102,110 @@ main {
       text-align: right;
     }
 
-    .section-frases {
-      display: flex;
-      flex-direction: column;
-      justify-content: right;
+    .wrapper-frases {
+      margin-bottom: 1%;
     }
   }
 }
 
-footer {
+.footer {
   display: flex;
   align-items: center;
-  height: 9.4vh;
-  width: 100vw;
-  padding-left: 16%;
+  justify-content: space-between;
+  padding-left: 14%;
+  height: 9.7vh;
 
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
 
-  .paragraph-footer {
-    font-family: "Mark Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: right;
-    color: #ffffff;
-
-    width: 541px;
-  }
-
-  .white-line {
-    margin-left: 3%;
-    margin-right: 7%;
-  }
-
-  .text-refresh {
-    font-family: "Mark Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: right;
-    color: #ffffff;
-
-    margin-right: 2%;
-  }
-
-  .timer {
-    font-family: "Mark Pro Bold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    text-align: center;
-    color: #ffffff;
-
-  }
-
-  .seconds {
-    font-family: "Mark Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: #ffffff;
-    
-  }
-
-  .btn-footer {
-    height: 9.4vh;
-    width: 10%;
-    border: none;
-  }
-
-  .btn-white {
-    background: #ffffff;
-  }
-
-  .btn-black {
-    background-color: transparent;
-
-    font-family: "Mark Pro";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+  .text-footer {
     display: flex;
     align-items: center;
-    text-align: center;
-    color: #ffffff;
+    gap: 35px;
+
+    .paragraph-footer {
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      text-align: right;
+      color: #ffffff;
+
+      width: 541px;
+    }
+  }
+
+  .wrapper-timer {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    .text-refresh {
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: right;
+      color: #ffffff;
+
+      margin-right: 10%;
+    }
+
+    .timer {
+      font-family: "Mark Pro Bold";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .seconds {
+      font-family: "Mark Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  .navegation-footer {
+    display: flex;
+    justify-content: right;
+    width: 15vw;
+
+    .btn-footer {
+      cursor: pointer;
+    }
+
+    .wrapper-button-continuar {
+      background-color: #ffffff;
+      height: 9.7vh;
+
+      font-family: "Mark Pro";
+      font-size: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #c13216;
+      width: 131px;
+    }
+
+    .wrapper-button-logout {
+      font-family: "Mark Pro Bold";
+      font-weight: 700;
+      font-size: 12px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #ffffff;
+      width: 128px;
+    }
+
   }
 }

@@ -79,22 +79,22 @@ function Home() {
         <img className="ball-uol" src="./images/bola-uol.png" alt="logo uol" />
 
         <section className="section-frases">
-          <div>
+          <div className="wrapper-frases">
             <h2 className="title-eng">Our mission is</h2>
             <h3 className="title-pt">Nossa missão é</h3>
           </div>
 
-          <div>
+          <div className="wrapper-frases">
             <h2 className="title-eng">to transform the world</h2>
             <h3 className="title-pt">transformar o mundo</h3>
           </div>
 
-          <div>
+          <div className="wrapper-frases">
             <h2 className="title-eng">building digital experiences</h2>
             <h3 className="title-pt">construindo experiências digitais</h3>
           </div>
 
-          <div>
+          <div className="wrapper-frases">
             <h2 className="title-eng">that enable our client’s growth</h2>
             <h3 className="title-pt">que permitam o crescimento dos nossos clientes</h3>
           </div>
@@ -102,7 +102,7 @@ function Home() {
       </main>
 
       <footer className="footer">
-        <div>
+        <div className="text-footer">
           <p className="paragraph-footer">
             Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.
           </p>
@@ -110,7 +110,7 @@ function Home() {
           <img className="white-line" src="./images/line-white.svg" alt="line" />
         </div>
 
-        <div>
+        <div className="wrapper-timer">
           <p className="text-refresh">
             Application <br></br>refresh in
           </p>
@@ -122,15 +122,19 @@ function Home() {
           </div>
         </div>
 
-        <div>
-          <button className="btn-footer btn-white" onClick={() => window.open("https://compass.uol/pt/home", "_self")}>
-            Continuar Navegando
-          </button>
+        <section className="navegation-footer">
+          <div className="wrapper-button-continuar">
+            <a className="btn-footer btn-white" onClick={() => window.open("https://compass.uol/pt/home", "_self")}>
+              Continuar <br></br> Navegando
+            </a>
+          </div>
 
-          <button className="btn-footer btn-black" onClick={() => navigate("/")}>
-            Logout
-          </button>
-        </div>
+          <div className="wrapper-button-logout">
+            <a className="btn-footer btn-black" onClick={() => navigate("/")}>
+              Logout
+            </a>
+          </div>
+        </section>
       </footer>
     </div>
   );

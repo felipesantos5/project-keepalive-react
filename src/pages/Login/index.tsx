@@ -1,8 +1,30 @@
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 function Login() {
   const navigate = useNavigate();
+
+  const validateEmail = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+");
+
+  const validatePassword = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [emailErr, setEmailErr] = useState(false);
+  const [passwordErr, setPasswordErr] = useState(false);
+
+  const validate = () => {
+    if (!validateEmail.test(email) && !validatePassword.test(password)) {
+      setEmailErr(true);
+      
+    } else {
+      setEmailErr(false);
+      navigate("/home");
+    }
+    
+  };
 
   return (
     <section className="wrapper">
@@ -12,21 +34,27 @@ function Login() {
 
         <h2 className="title-login">Login</h2>
 
-        <div className="wraper-input">
-          <input className="input" type="email" id="user" placeholder="Usuário" />
+        <div className="wrapper-input">
+          <input className="input" type="email" id="user" placeholder="Usuário" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-          <img className="user icon-input" src="./images/user.svg" alt="usuário" />
+          <i className="fa fa-user-o" />
         </div>
 
-        <div className="wraper-input">
-          <input className="input" type="password" id="password" placeholder="Senha" />
+        <div className="wrapper-input">
+          <input className="input" type="password" id="password" placeholder="Senha" minLength={5} value={password} onChange={(e) => setPassword(e.target.value)} />
 
-          <img className="locker icon-input" src="./images/locker.svg" alt="cadeado" />
+          <i className="fa fa-lock"></i>
         </div>
 
-        <p className="error-input">Ops, usuário ou senha inválidos. Tente novamente!</p>
+        {emailErr &&<p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
+
+        
         <div className="wraper-button">
-          <button className="button-login" onClick={() => navigate("/home")}>
+          <button 
+          className="button-login"
+          type="submit" 
+          onClick={validate}
+          >
             continuar
           </button>
         </div>

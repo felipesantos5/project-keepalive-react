@@ -13,8 +13,6 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  
-
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
   background-size: 100%;
 }
@@ -30,7 +28,7 @@
   line-height: 76.05px;
   color: #e0e0e0;
 
-  margin-top: 197px;
+  margin-top: 19%;
   margin-bottom: 17px;
   padding-left: 287px;
 }
@@ -61,12 +59,13 @@
   padding-left: 287px;
 }
 
-.wraper-input {
+.wrapper-input {
   display: flex;
   align-items: center;
 
   margin-top: 33px;
   padding-left: 287px;
+  position: relative;
 }
 
 label {
@@ -98,6 +97,11 @@ label {
   color: #e0e0e0;
 
   padding-left: 20px;
+}
+
+.input:focus ~ .user {
+  transition: 1s ease;
+  right: 60px;
 }
 
 .input:invalid {
@@ -132,7 +136,8 @@ input:-webkit-autofill {
   color: #ffffff;
   font-size: 18px;
 
-  margin-top: 115px;
+  margin-top: 80px;
+  margin-bottom: 10%;
   
 
   cursor: pointer;
@@ -148,15 +153,28 @@ input:-webkit-autofill {
   height: 69px;
   margin: auto;
   margin-top: 35px;
+
 }
 
-.locker {
-  width: 20px;
-  height: 25px;
+.input:focus ~ .fa {
+  transition: 1s ease;
+  margin-left: 330px;
 }
 
-.user {
-  width: 20px;
+.fa {
+  color: #E0E0E0;
+  margin-left: 18px;
+  position: absolute;
+  margin-left: 400px;
+}
+
+.fa-user-o {
+  font-size: 24px;
+}
+
+.fa-lock {
+  font-size: 26px;
+
 }
 
 .icon-input {
@@ -181,4 +199,3 @@ input:-webkit-autofill {
   margin-top: 28px;
 
 }
-
