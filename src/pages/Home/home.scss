@@ -1,211 +1,311 @@
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper-sec2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 header {
   display: flex;
   justify-content: space-between;
 
   padding-top: 25px;
+}
 
-  .logo-compass-pequeno {
-    width: 150px;
-    height: 42.75px;
+.logo-compass-pequeno {
+  width: 150px;
+  height: 42.75px;
 
-    margin-left: 40px;
-  }
+  margin-left: 40px;
+}
 
-  .clock {
-    text-align: center;
-    .hour {
-      font-family: "Mark Pro Bold";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 144px;
-      text-align: center;
+.clock {
+  text-align: center;
+}
 
-      color: #222222;
-    }
+.hour {
+  font-family: "Mark Pro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 144px;
+  text-align: center;
 
-    .day {
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
+  color: #222222;
+}
 
-      text-align: center;
+.day {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
 
-      color: #222222;
-    }
-  }
+  text-align: center;
 
-  .wraper-weather {
-    margin-right: 3%;
+  color: #222222;
+}
 
-    .place {
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      text-align: center;
+.wraper-weather {
+  margin-right: 3%;
+}
 
-      color: #222222;
-    }
-    .wraper-weather-temperature {
-      display: flex;
-      align-items: center;
+.place {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
 
-      .cloud {
-        margin-right: 12px;
-      }
+  color: #222222;
+}
 
-      .temperature {
-        font-family: "Mark Pro Bold";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        text-align: center;
+.wraper-weather-temperature {
+  display: flex;
+  align-items: center;
+}
 
-        color: #222222;
-      }
-    }
-  }
+.cloud {
+  margin-right: 12px;
+}
+
+.temperature {
+  font-family: "Mark Pro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+
+  color: #222222;
 }
 
 main {
   display: flex;
   justify-content: space-between;
   margin-right: 8%;
+}
 
-  .ball-uol {
-    position: relative;
-    z-index: -10;
-    top: 70px;
-  }
+.ball-uol {
+  position: relative;
+  z-index: -10;
+  top: 60px;
+  width: 28.4%;
+  height: 30%;
+}
 
-  .section-frases {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    margin-top: 166px;
-    .title-eng {
-      color: #c12d18;
+.section-frases {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-top: 10%;
+}
 
-      font-family: "Mark Pro Bold";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 64px;
-      text-align: right;
-    }
-    .title-pt {
-      color: #222222;
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      text-align: right;
-    }
+.title-small {
+  color: #c12d18;
 
-    .wrapper-frases {
-      margin-bottom: 1%;
-    }
-  }
+  font-family: "Mark Pro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: right;
+}
+
+.title-eng {
+  color: #c12d18;
+
+  font-family: "Mark Pro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: right;
+}
+
+.title-pt {
+  color: #222222;
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+}
+
+.wrapper-frases {
+  margin-bottom: 1%;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 14%;
-  height: 9.7vh;
 
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
+}
 
-  .text-footer {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+.text-footer {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-left: 12%;
+}
 
-    .paragraph-footer {
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      text-align: right;
-      color: #ffffff;
+.paragraph-footer {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
+  color: #ffffff;
 
-      width: 541px;
-    }
+  width: 541px;
+}
+
+.wrapper-timer {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  margin-right: 10%;
+}
+
+.text-refresh {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: right;
+  color: #ffffff;
+
+  margin-right: 10%;
+}
+
+.timer {
+  font-family: "Mark Pro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.seconds {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.navegation-footer {
+  display: flex;
+  justify-content: right;
+  width: 15vw;
+}
+
+.btn-footer {
+  cursor: pointer;
+}
+
+.wrapper-button-continuar {
+  background-color: #ffffff;
+  height: 9.7vh;
+
+  font-family: "Mark Pro";
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c13216;
+  width: 131px;
+}
+
+.wrapper-button-logout {
+  font-family: "Mark Pro Bold";
+  font-weight: 700;
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  width: 128px;
+}
+
+@media (max-width: 1500px) {
+  .title-eng {
+    font-size: 54px;
+  }
+  .title-small {
+    font-size: 28px;
+  }
+  .ball-uol {
+    width: 32%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .title-eng {
+    font-size: 48px;
+  }
+  .title-small {
+    font-size: 24px;
+  }
+  .ball-uol {
+    width: 32%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .ball-uol {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .title-eng {
+    font-size: 44px;
+  }
+  .title-small {
+    font-size: 20px;
+  }
+  .ball-uol {
+    width: 37%;
+  }
+}
+
+@media (max-width: 1235px) {
+  .ball-uol {
+    display: none;
+  }
+  .section-frases {
+    margin: auto;
+    margin-top: 10%;
   }
 
-  .wrapper-timer {
-    display: flex;
-    align-items: center;
-    gap: 10%;
-
-    .text-refresh {
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      text-align: right;
-      color: #ffffff;
-
-      margin-right: 10%;
-    }
-
-    .timer {
-      font-family: "Mark Pro Bold";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 48px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .seconds {
-      font-family: "Mark Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      text-align: center;
-      color: #ffffff;
-    }
+  .footer {
+    flex-direction: column;
   }
+}
 
-  .navegation-footer {
-    display: flex;
-    justify-content: right;
-    width: 15vw;
-
-    .btn-footer {
-      cursor: pointer;
-    }
-
-    .wrapper-button-continuar {
-      background-color: #ffffff;
-      height: 9.7vh;
-
-      font-family: "Mark Pro";
-      font-size: 12px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      color: #c13216;
-      width: 131px;
-    }
-
-    .wrapper-button-logout {
-      font-family: "Mark Pro Bold";
-      font-weight: 700;
-      font-size: 12px;
-      align-items: center;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      color: #ffffff;
-      width: 128px;
-    }
-
+@media (max-width: 840px) {
+  .clock {
+    display: none;
+  }
+  main {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+  }
+  .section-frases {
+    gap: 15px;
+  }
+  .wraper-weather {
+    margin-right: 40px;
   }
 }

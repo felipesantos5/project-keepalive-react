@@ -1,12 +1,18 @@
-@import url('../../variables.scss');
+@import url("../../variables.scss");
 
 :root {
   font-family: Mark Pro;
 }
 
-.wrapper {
+html, body { 
+ height: 100%;
+ overflow-x: hidden
+}
+
+.wrapper-sec1 {
   display: grid;
-  grid-template-columns: 960px 960px;
+  grid-template-columns: 50% 50%;
+
 }
 
 .section-1 {
@@ -15,12 +21,30 @@
   height: 100vh;
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
   background-size: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .section-2 {
   background-image: url("../../../public/images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  .logo-compass-sec2 {
+    width: 30%;
+    height: 69px;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+  }
+}
+
+.logo-compass-sec1 {
+  //display: none;
+  width: 60%;
+  height: 69px;
+  margin: auto;
+
 }
 
 .ola {
@@ -30,7 +54,6 @@
 
   margin-top: 19%;
   margin-bottom: 17px;
-  padding-left: 287px;
 }
 
 .paragraph-login {
@@ -43,7 +66,6 @@
   color: #e0e0e0;
 
   margin-bottom: 97px;
-  padding-left: 287px;
 }
 
 .title-login {
@@ -56,7 +78,6 @@
   font-size: 30px;
   line-height: 38px;
   color: #e0e0e0;
-  padding-left: 287px;
 }
 
 .wrapper-input {
@@ -64,138 +85,116 @@
   align-items: center;
 
   margin-top: 33px;
-  padding-left: 287px;
-  position: relative;
-}
-
-label {
-  font-family: "Mark Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #e0e0e0;
-}
-
-.input {
-  width: 379px;
-  height: 60px;
-  box-sizing: border-box;
   position: relative;
 
-  background: #26292c;
-  border: 1px solid #ffffff;
-  border-radius: 50px;
-  outline: 0;
+  .input {
+    width: 379px;
+    height: 60px;
+    box-sizing: border-box;
+    position: relative;
 
-  font-family: Mark Pro;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+    background: #26292c;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    outline: 0;
 
-  color: #e0e0e0;
+    font-family: Mark Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 
-  padding-left: 20px;
-}
+    color: #e0e0e0;
 
-.input:focus ~ .user {
-  transition: 1s ease;
-  right: 60px;
-}
+    padding-left: 20px;
+  }
 
-.input:invalid {
-  border: #e9b425 1px solid;
-}
+  .input:invalid {
+    border: #e9b425 1px solid;
+  }
 
-.input:valid {
-  border: #fff 1px solid;
-}
+  .input:valid {
+    border: #fff 1px solid;
+  }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #26292c inset;
-}
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #26292c inset;
+  }
 
-input:-webkit-autofill {
-  -webkit-text-fill-color: #e0e0e0 !important;
-}
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #e0e0e0 !important;
+  }
 
-.wraper-button {
-  padding-left: 287px;
-}
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 88%;
+  }
 
-.button-login {
-  width: 379px;
-  height: 67px;
-  border: none;
-  background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
-  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
+  .fa {
+    color: #e0e0e0;
+    margin-left: 18px;
+    position: absolute;
+    margin-left: 105%;
+  }
 
-  font-family: Mark Pro Bold;
-  color: #ffffff;
-  font-size: 18px;
+  .fa-user-o {
+    font-size: 24px;
+  }
 
-  margin-top: 80px;
-  margin-bottom: 10%;
-  
-
-  cursor: pointer;
-}
-
-.logo-compass {
-  height: 100%;
-  display: block;
-}
-
-.logo-compass {
-  width: 306;
-  height: 69px;
-  margin: auto;
-  margin-top: 35px;
-
-}
-
-.input:focus ~ .fa {
-  transition: 1s ease;
-  margin-left: 330px;
-}
-
-.fa {
-  color: #E0E0E0;
-  margin-left: 18px;
-  position: absolute;
-  margin-left: 400px;
-}
-
-.fa-user-o {
-  font-size: 24px;
-}
-
-.fa-lock {
-  font-size: 26px;
-
-}
-
-.icon-input {
-  margin-left: 18px;
-
+  .fa-lock {
+    font-size: 26px;
+  }
 }
 
 .error-input {
   font-family: Mark Pro Bold;
-  display: block;
   font-size: 16px;
   color: #e9b425;
   line-height: 20px;
 
   width: 283px;
   height: 40px;
-  margin: auto;
   text-align: center;
-  padding: 0;
-  padding-left: 0;
 
   margin-top: 28px;
+  margin-left: 43px;
+}
 
+.wraper-button {
+  display: flex;
+  .button-login {
+    width: 379px;
+    height: 67px;
+    border: none;
+    background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+
+    font-family: Mark Pro Bold;
+    color: #ffffff;
+    font-size: 18px;
+
+    margin-top: 80px;
+    margin-bottom: 10%;
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1150px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
+  }
+  .section-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .section-1 {
+
+  }
+  
 }
