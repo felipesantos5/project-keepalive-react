@@ -66,11 +66,11 @@ function Home() {
         </div>
 
         <div className="wraper-weather">
-          <p className="place">Passo Fundo - RS</p>
+          <p className="place">São José - BR</p>
 
           <div className="wraper-weather-temperature">
             <img className="cloud" src="./images/cloud.svg" alt="" />
-            <p className="temperature">22º</p>
+            <p className="temperature">18º</p>
           </div>
         </div>
       </header>

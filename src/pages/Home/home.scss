@@ -95,14 +95,15 @@ main {
   z-index: -10;
   top: 60px;
   width: 28.4%;
-  height: 30%;
+  height: 36%;
 }
 
 .section-frases {
   display: flex;
   flex-direction: column;
   justify-content: right;
-  margin-top: 10%;
+  margin-top: 7%;
+  margin-bottom: 7%;
 }
 
 .title-small {
@@ -145,7 +146,6 @@ footer {
 
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
   height: 20%;
-  padding-top: 1px;
 }
 
 .text-footer {
@@ -244,6 +244,7 @@ footer {
 
 .wrapper-responsive {
   display: flex;
+  margin-left: 10%;
 }
 
 @media (max-width: 1500px) {
@@ -280,8 +281,8 @@ footer {
   .title-eng {
     font-size: 44px;
   }
-  .title-small {
-    font-size: 20px;
+  .wrapper-responsive {
+    margin-left: 0;
   }
   .ball-uol {
     width: 37%;
@@ -303,12 +304,72 @@ footer {
   .wrapper-responsive {
     justify-content: center;
   }
+  .text-footer {
+    margin: 0;
+  }
+  .wrapper-timer {
+    margin: 0;
+  }
 
+  .section-frases {
+    margin-bottom: 14%;
+  }
+  main {
+    margin: 0;
+  }
+  footer {
+    padding-top: 15px;
+  }
+  .navegation-footer {
+    justify-content: center;
+    width: 100%;
+  }
+  .section-frases {
+    width: 80%;
+  }
+  .title-small {
+    font-size: 32px;
+  }
+
+  .title-eng {
+    font-size: 54px;
+  }
+  .title-pt {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .wrapper-responsive {
+    display: block;
+  }
+  .text-footer {
+    display: inline-block;
+  }
+  .white-line {
+    visibility: hidden;
+    width: 0;
+  }
+  .wrapper-timer {
+    justify-content: center;
+    gap: 0;
+    padding-bottom: 20px;
+  }
+  .paragraph-footer {
+    text-align: center;
+  }
+  .text-footer {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 840px) {
   .clock {
     display: none;
+  }
+  .section-frases {
+    margin-top: 0;
   }
   main {
     padding-left: 15%;
@@ -323,6 +384,57 @@ footer {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+  footer {
+    padding-inline: 30px;
+  }
+  .text-footer {
+    margin-bottom: 15px;
+  }
+  .paragraph-footer {
+    width: 100%;
+    margin: auto;
+    text-align: justify;
+  }
+}
 
+@media (max-width: 550px) {
+  .section-frases {
+    width: 100%;
+  }
+  .title-eng {
+    font-size: 38px;
+  }
+  .title-pt {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .wraper-weather {
+    margin: 0;
+}
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 30px;
+
+  }
+
+  .logo-compass-pequeno {
+    margin: 0;
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .title-eng {
+    font-size: 32px;
+  }
+  .title-pt {
+    font-size: 16px;
+  }
 }
