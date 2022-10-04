@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const [counter, setCounter] = useState(1200);
+  const [counter, setCounter] = useState(60);
 
   useEffect(() => {
     counter >= 1 ? setTimeout(() => setCounter(counter - 1), 1000) : navigate("/");
