@@ -4,23 +4,26 @@
   font-family: Mark Pro;
 }
 
-html, body { 
- height: 100%;
- overflow-x: hidden
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper-sec1 {
   display: grid;
   grid-template-columns: 50% 50%;
-
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .section-1 {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  height: 100%;
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
-  background-size: 100%;
+  background-size: 200%;
   padding-left: 20%;
   padding-right: 20%;
 }
@@ -29,22 +32,23 @@ html, body {
   background-image: url("../../../public/images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  .logo-compass-sec2 {
-    width: 30%;
-    height: 69px;
-    display: block;
-    margin: auto;
-    margin-top: 35px;
-  }
+.logo-compass-sec2 {
+  width: 270px;
+  height: 69px;
+  display: block;
+  margin: auto;
+  margin-top: 35px;
 }
 
 .logo-compass-sec1 {
-  //display: none;
-  width: 60%;
+  padding-top: 5%;
+  padding-bottom: 15px;
+  display: none;
+  width: 260px;
   height: 69px;
   margin: auto;
-
 }
 
 .ola {
@@ -86,64 +90,63 @@ html, body {
 
   margin-top: 33px;
   position: relative;
+}
 
-  .input {
-    width: 379px;
-    height: 60px;
-    box-sizing: border-box;
-    position: relative;
+.input {
+  width: 379px;
+  height: 60px;
+  box-sizing: border-box;
+  position: relative;
 
-    background: #26292c;
-    border: 1px solid #ffffff;
-    border-radius: 50px;
-    outline: 0;
+  background: #26292c;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  outline: 0;
 
-    font-family: Mark Pro;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+  font-family: Mark Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 
-    color: #e0e0e0;
+  color: #e0e0e0;
 
-    padding-left: 20px;
-  }
+  padding-left: 20px;
+}
 
-  .input:invalid {
-    border: #e9b425 1px solid;
-  }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #26292c inset;
+}
 
-  .input:valid {
-    border: #fff 1px solid;
-  }
+input:-webkit-autofill {
+  -webkit-text-fill-color: #e0e0e0 !important;
+}
 
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #26292c inset;
-  }
+.input:invalid {
+  border: #e9b425 1px solid;
+}
 
-  input:-webkit-autofill {
-    -webkit-text-fill-color: #e0e0e0 !important;
-  }
+.input:valid {
+  border: #fff 1px solid;
+}
 
-  .input:focus ~ .fa {
-    transition: 1.3s ease;
-    margin-left: 88%;
-  }
+.input:focus ~ .fa {
+  transition: 1.3s ease;
+  margin-left: 88%;
+}
 
-  .fa {
-    color: #e0e0e0;
-    margin-left: 18px;
-    position: absolute;
-    margin-left: 105%;
-  }
+.fa {
+  color: #e0e0e0;
+  margin-left: 398px;
+  position: absolute;
+}
 
-  .fa-user-o {
-    font-size: 24px;
-  }
+.fa-user-o {
+  font-size: 24px;
+}
 
-  .fa-lock {
-    font-size: 26px;
-  }
+.fa-lock {
+  font-size: 26px;
 }
 
 .error-input {
@@ -162,39 +165,149 @@ html, body {
 
 .wraper-button {
   display: flex;
-  .button-login {
-    width: 379px;
-    height: 67px;
-    border: none;
-    background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 50px;
 
-    font-family: Mark Pro Bold;
-    color: #ffffff;
-    font-size: 18px;
+}
 
-    margin-top: 80px;
-    margin-bottom: 10%;
+.button-login {
+  width: 379px;
+  height: 67px;
+  border: none;
+  background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
 
-    cursor: pointer;
+  font-family: Mark Pro Bold;
+  color: #ffffff;
+  font-size: 18px;
+
+  margin-top: 80px;
+  margin-bottom: 60px;
+
+  cursor: pointer;
+}
+
+@media (max-width:1275px) {
+  .fa {
+    margin-left: 103%;
   }
 }
 
 @media (max-width: 1150px) {
-  .wrapper {
+  .wrapper-sec1 {
     display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%) no-repeat;
+  }
+  .section-1 {
+    width: 100%;
+    
   }
   .section-2 {
-    display: none;
+    visibility: hidden;
+    width: 0;
+  }
+  .logo-compass-sec1 {
+    display: block;
+  }
+  .ola {
+    margin-top: 10%;
+  }
+    .fa {
+    margin-left: 398px;
   }
 }
+
+@media (max-width: 1000px) {
+  .button-login {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  .button-login {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 655px) {
+  .button-login {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width:645px) {
+  .fa {
+    margin-left: 103%;
+  }
+}
+
+@media (max-width: 635px) {
+  .section-1 {
+    width: 60%;
+  }
+  .error-input {
+    margin: auto;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+}
+
 
 @media (max-width: 550px) {
-  .section-1 {
-
+  .input {
+    font-size: 14px;
   }
-  
+  .button-login {
+    margin-bottom: 85px;
+  }
 }
+
+@media (max-width: 460px)  {
+  .paragraph-login {
+    width: 220px;
+  }
+  .logo-compass-sec1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px)  {
+  .button-login {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 350px)  {
+  .fa {
+    color: #e0e0e0;
+    position: relative;
+    margin: 0;
+  }
+}
+
+@media (max-width: 350px)  {
+  .paragraph-login {
+    width: 170px;
+  }
+  .fa {
+    display: none;
+  }
+  .input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 265px)  {
+  .paragraph-login {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 210px) {
+  .button-login {
+    margin-bottom: 110px;
+  }
+}
+
+

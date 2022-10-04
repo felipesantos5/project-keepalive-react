@@ -18,18 +18,20 @@ function Login() {
   const validate = () => {
     if (!validateEmail.test(email) && !validatePassword.test(password)) {
       setEmailErr(true);
-      
     } else {
       setEmailErr(false);
       navigate("/home");
     }
-    
   };
 
   return (
-    <section className="wrapper">
+    <section className="wrapper-sec1">
       <div className="section-1">
+
+        <img className="logo-compass-sec1" src="./images/LogoCompasso.svg" alt="Logo Compass" />
+        
         <h1 className="ola">Olá,</h1>
+
         <h3 className="paragraph-login">Para continuar navegando de forma segura, efetue o login na rede.</h3>
 
         <h2 className="title-login">Login</h2>
@@ -46,22 +48,17 @@ function Login() {
           <i className="fa fa-lock"></i>
         </div>
 
-        {emailErr &&<p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
+        {emailErr && <p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
 
-        
         <div className="wraper-button">
-          <button 
-          className="button-login"
-          type="submit" 
-          onClick={validate}
-          >
+          <button className="button-login" type="submit" onClick={validate}>
             continuar
           </button>
         </div>
       </div>
 
       <div className="section-2">
-        <img className="logo-compass" src="./images/LogoCompasso.svg" alt="Logo Compass" />
+        <img className="logo-compass-sec2" src="./images/LogoCompasso.svg" alt="Logo Compass" />
       </div>
     </section>
   );

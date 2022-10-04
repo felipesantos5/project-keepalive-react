@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const [counter, setCounter] = useState(60);
+  const [counter, setCounter] = useState(1200);
 
   useEffect(() => {
     counter >= 1 ? setTimeout(() => setCounter(counter - 1), 1000) : navigate("/");
@@ -56,7 +56,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="wrapper-sec2">
       <header>
         <img className="logo-compass-pequeno" src="./images/logo-menor.png" alt="logo uol" />
 
@@ -80,7 +80,7 @@ function Home() {
 
         <section className="section-frases">
           <div className="wrapper-frases">
-            <h2 className="title-eng">Our mission is</h2>
+            <h2 className="title-small">Our mission is</h2>
             <h3 className="title-pt">Nossa missão é</h3>
           </div>
 
@@ -102,29 +102,31 @@ function Home() {
       </main>
 
       <footer className="footer">
-        <div className="text-footer">
-          <p className="paragraph-footer">
-            Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.
-          </p>
-
-          <img className="white-line" src="./images/line-white.svg" alt="line" />
-        </div>
-
-        <div className="wrapper-timer">
-          <p className="text-refresh">
-            Application <br></br>refresh in
-          </p>
-          <div>
-            <p className="timer">
-              <Refresh />
+        <div className="wrapper-responsive">
+          <div className="text-footer">
+            <p className="paragraph-footer">
+              Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.
             </p>
-            <p className="seconds">Seconds</p>
+
+            <img className="white-line" src="./images/line-white.svg" alt="line" />
+          </div>
+
+          <div className="wrapper-timer">
+            <p className="text-refresh">
+              Application <br></br>refresh in
+            </p>
+            <div>
+              <p className="timer">
+                <Refresh />
+              </p>
+              <p className="seconds">Seconds</p>
+            </div>
           </div>
         </div>
 
         <section className="navegation-footer">
           <div className="wrapper-button-continuar">
-            <a className="btn-footer btn-white" onClick={() => window.open("https://compass.uol/pt/home", "_self")}>
+            <a className="btn-footer btn-white" onClick={() => window.open("https://compass.uol/pt/home", "_blank")}>
               Continuar <br></br> Navegando
             </a>
           </div>
