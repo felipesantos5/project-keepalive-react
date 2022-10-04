@@ -66,7 +66,7 @@ function Home() {
         </div>
 
         <div className="wraper-weather">
-          <p className="place">São José - BR</p>
+          <p className="place">São José - SC</p>
 
           <div className="wraper-weather-temperature">
             <img className="cloud" src="./images/cloud.svg" alt="" />
