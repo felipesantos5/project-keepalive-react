@@ -132,7 +132,7 @@ input:-webkit-autofill {
 
 .input:focus ~ .fa {
   transition: 1.3s ease;
-  margin-left: 88%;
+  margin-left: 58%;
 }
 
 .fa {
@@ -165,7 +165,6 @@ input:-webkit-autofill {
 
 .wraper-button {
   display: flex;
-
 }
 
 .button-login {
@@ -186,7 +185,14 @@ input:-webkit-autofill {
   cursor: pointer;
 }
 
-@media (max-width:1275px) {
+@media (max-width: 1400px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 74%;
+  }
+}
+
+@media (max-width: 1275px) {
   .fa {
     margin-left: 103%;
   }
@@ -198,7 +204,6 @@ input:-webkit-autofill {
   }
   .section-1 {
     width: 100%;
-    
   }
   .section-2 {
     visibility: hidden;
@@ -210,14 +215,28 @@ input:-webkit-autofill {
   .ola {
     margin-top: 10%;
   }
-    .fa {
+  .fa {
     margin-left: 398px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 55%;
   }
 }
 
 @media (max-width: 1000px) {
   .button-login {
     margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 73%;
   }
 }
 
@@ -233,7 +252,14 @@ input:-webkit-autofill {
   }
 }
 
-@media (max-width:645px) {
+@media (max-width: 653px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 85%;
+  }
+}
+
+@media (max-width: 645px) {
   .fa {
     margin-left: 103%;
   }
@@ -249,9 +275,7 @@ input:-webkit-autofill {
     font-size: 14px;
     margin-top: 30px;
   }
-
 }
-
 
 @media (max-width: 550px) {
   .input {
@@ -262,7 +286,7 @@ input:-webkit-autofill {
   }
 }
 
-@media (max-width: 460px)  {
+@media (max-width: 460px) {
   .paragraph-login {
     width: 220px;
   }
@@ -271,37 +295,50 @@ input:-webkit-autofill {
   }
 }
 
-@media (max-width: 375px)  {
+@media (max-width: 425px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 87%;
+  }
+}
+
+@media (max-width: 375px) {
   .button-login {
     margin-bottom: 150px;
   }
-}
-
-@media (max-width: 350px)  {
-  .fa {
-    color: #e0e0e0;
-    position: relative;
-    margin: 0;
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 84%;
   }
 }
 
-@media (max-width: 350px)  {
+
+@media (max-width: 350px) {
   .paragraph-login {
     width: 170px;
   }
-  .fa {
-    display: none;
-  }
+  // .fa {
+  //   display: none;
+  //   color: #e0e0e0;
+  //   position: relative;
+  //   margin: 0;
+  // }
   .input {
-    width: 100%;
+    width: 95%;
   }
 }
 
-@media (max-width: 265px)  {
+@media (max-width: 320px) {
+  .input:focus ~ .fa {
+    transition: 1.3s ease;
+    margin-left: 76%;
+  }
+}
+
+@media (max-width: 265px) {
   .paragraph-login {
     width: 130px;
   }
-
 }
 
 @media (max-width: 210px) {
@@ -309,5 +346,3 @@ input:-webkit-autofill {
     margin-bottom: 160px;
   }
 }
-
-
