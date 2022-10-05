@@ -260,6 +260,9 @@ footer {
 }
 
 @media (max-width: 1380px) {
+  .ball-uol {
+    width: 35%;
+  }
   .title-eng {
     font-size: 48px;
   }
@@ -268,12 +271,6 @@ footer {
   }
   .ball-uol {
     width: 32%;
-  }
-}
-
-@media (max-width: 1380px) {
-  .ball-uol {
-    width: 35%;
   }
 }
 
