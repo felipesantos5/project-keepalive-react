@@ -1,6 +1,8 @@
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+import Input from "../../components/input/input";
+import Button from "../../components/button/button";
 
 function Login() {
   const navigate = useNavigate();
@@ -50,11 +52,7 @@ function Login() {
 
         {emailErr && <p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
 
-        <div className="wraper-button">
-          <button className="button-login" type="submit" onClick={validate}>
-            continuar
-          </button>
-        </div>
+        <Button label="continuar" onClick={validate}/>
       </div>
 
       <div className="section-2">
