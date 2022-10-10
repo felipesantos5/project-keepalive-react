@@ -1,5 +1,5 @@
 import "./home.scss";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -55,6 +55,29 @@ function Home() {
     return { Data: DateCurrent, Hora: HourCurrent };
   }
 
+  //
+
+  const [location, setLocation] = useState<boolean>(false);
+  const [city, setCity] = useState<string>("");
+  const [temp, setTemp] = useState<number>(0);
+  const [lat, setLat] = useState<number>();
+  const [long, setLong] = useState<number>();
+  const [weather,setWeather] = useEffect<any>();
+  // const [data, setData] = useState<any>([]);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position.coords.latitude, position.coords.longitude);
+      setLocation(true);
+    });
+  }, []);
+
+  if (location == false) {
+    console.log("nao conseguiu");
+  } else {
+    console.log("conseguiu");
+  }
+
   return (
     <div className="wrapper-sec2">
       <header>
@@ -66,11 +89,11 @@ function Home() {
         </div>
 
         <div className="wraper-weather">
-          <p className="place">São José - SC</p>
+          <p className="place"></p>
 
           <div className="wraper-weather-temperature">
             <img className="cloud" src="./images/cloud.svg" alt="" />
-            <p className="temperature">18º</p>
+            <p className="temperature"></p>
           </div>
         </div>
       </header>
