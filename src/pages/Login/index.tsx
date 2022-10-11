@@ -17,7 +17,7 @@ function Login() {
   const [emailErr, setEmailErr] = useState(false);
   const [passwordErr, setPasswordErr] = useState(false);
 
-  const validate = () => {
+  const validateLogin = () => {
     if (!validateEmail.test(email) && !validatePassword.test(password)) {
       setEmailErr(true);
     } else {
@@ -26,12 +26,15 @@ function Login() {
     }
   };
 
+  function navigateRegister () {
+    navigate("/register");
+  }
+
   return (
     <section className="wrapper-sec1">
       <div className="section-1">
-
         <img className="logo-compass-sec1" src="./images/LogoCompasso.svg" alt="Logo Compass" />
-        
+
         <h1 className="ola">Olá,</h1>
 
         <h3 className="paragraph-login">Para continuar navegando de forma segura, efetue o login na rede.</h3>
@@ -39,7 +42,7 @@ function Login() {
         <h2 className="title-login">Login</h2>
 
         <div className="wrapper-input">
-          <input className="input" type="email" id="user" placeholder="Usuário" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input className="input" type="email" id="user" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
           <i className="fa fa-user-o" />
         </div>
@@ -52,7 +55,11 @@ function Login() {
 
         {emailErr && <p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
 
-        <Button label="continuar" onClick={validate}/>
+        <div className="wrapper-button-login">
+          <Button label="continuar" onClick={validateLogin} />
+
+          <a className="anchor-redirect" onClick={navigateRegister}>se você não possui um cadastro clique aqui</a>
+        </div>
       </div>
 
       <div className="section-2">
