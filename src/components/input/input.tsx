@@ -1,13 +1,15 @@
 interface Props {
-  icon: string;
+  label?: string;
+  Type?: string;
+  icon?: string;
+  Value?: string;
 }
 
-function Input({}) {
+function Input({ label, Type, icon, Value }: Props) {
   return (
     <div className="wrapper-input">
-      <input className="input" type="email" id="user" placeholder="Usuário"/>
-      <i className="fa {icon}" />
-      
+      <input className="input" type={Type} id="user" placeholder={label} value={Value}/>
+      <i className={icon} />
     </div>
   );
 }
