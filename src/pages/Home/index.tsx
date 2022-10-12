@@ -1,8 +1,9 @@
 import "./home.scss";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Locate from "../../weather";
 
-function Home() {
+export default function Home() {
   const [counter, setCounter] = useState(60);
 
   useEffect(() => {
@@ -57,27 +58,6 @@ function Home() {
 
   //
 
-  const [location, setLocation] = useState<boolean>(false);
-  const [city, setCity] = useState<string>("");
-  const [temp, setTemp] = useState<number>(0);
-  const [lat, setLat] = useState<number>();
-  const [long, setLong] = useState<number>();
-  const [weather,setWeather] = useEffect<any>();
-  // const [data, setData] = useState<any>([]);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position.coords.latitude, position.coords.longitude);
-      setLocation(true);
-    });
-  }, []);
-
-  if (location == false) {
-    console.log("nao conseguiu");
-  } else {
-    console.log("conseguiu");
-  }
-
   return (
     <div className="wrapper-sec2">
       <header>
@@ -88,14 +68,16 @@ function Home() {
           <p className="day">{DataHora().Data}</p>
         </div>
 
-        <div className="wraper-weather">
-          <p className="place"></p>
+        <Locate></Locate>
+
+        {/* <div className="wraper-weather">
+          <p className="place">{city}</p>
 
           <div className="wraper-weather-temperature">
             <img className="cloud" src="./images/cloud.svg" alt="" />
-            <p className="temperature"></p>
+            <p className="temperature">21°</p>
           </div>
-        </div>
+        </div> */}
       </header>
 
       <main>
@@ -126,6 +108,9 @@ function Home() {
 
       <footer className="footer">
         <div className="wrapper-responsive">
+          {/* <div className="wrapper-welcome">
+            <p className="paragraph-welcome">Seja bem vindo FELIPE</p>
+          </div> */}
           <div className="text-footer">
             <p className="paragraph-footer">
               Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.
@@ -164,5 +149,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
