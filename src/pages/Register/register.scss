@@ -2,3 +2,27 @@
   font-size: 22px;
 }
 
+.list-password {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-top: 14px;
+  list-style: circle;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.correct {
+  color: green;
+}
+
+.err-input {
+  color: #e9b425;
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+.wrapper-jatemcadastro {
+  margin-bottom: 20px;
+}
