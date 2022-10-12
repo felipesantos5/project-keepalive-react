@@ -1,15 +1,17 @@
 import "./login.scss";
-import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 import Input from "../../components/input/input";
 import Button from "../../components/button/button";
+
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 function Login() {
   const navigate = useNavigate();
 
-  const validateEmail = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+");
+  // const validateEmail = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+");
 
-  const validatePassword = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
+  // const validatePassword = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,18 +19,33 @@ function Login() {
   const [emailErr, setEmailErr] = useState(false);
   const [passwordErr, setPasswordErr] = useState(false);
 
-  const validateLogin = () => {
-    if (!validateEmail.test(email) && !validatePassword.test(password)) {
-      setEmailErr(true);
-    } else {
-      setEmailErr(false);
-      navigate("/home");
-    }
-  };
+  // const validateLogin = () => {
+  //   if (!validateEmail.test(email) && !validatePassword.test(password)) {
+  //     setEmailErr(true);
+  //   } else {
+  //     setEmailErr(false);
+  //     navigate("/home");
+  //   }
+  // };
 
-  function navigateRegister () {
+  function navigateRegister() {
     navigate("/register");
   }
+
+  const enter = () => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        navigate("/home");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
 
   return (
     <section className="wrapper-sec1">
@@ -48,18 +65,21 @@ function Login() {
         </div>
 
         <div className="wrapper-input">
-          <input className="input" type="password" id="password" placeholder="Senha" minLength={5} value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className="input" type="password" id="password" placeholder="Senha" minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} />
 
           <i className="fa fa-lock"></i>
         </div>
 
-        {emailErr && <p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>}
+        {/* {emailErr && <p className="error-input error-active">Ops, usuário ou senha inválidos. Tente novamente!</p>} */}
 
-        <div className="wrapper-button-login">
-          <Button label="continuar" onClick={validateLogin} />
+        <Button label="continuar" onClick={enter} />
 
-          <a className="anchor-redirect" onClick={navigateRegister}>se você não possui um cadastro clique aqui</a>
-        </div>
+        <p className="anchor-redirect">
+          se você não possui um cadastro{" "}
+          <a className="button-anchor" onClick={navigateRegister}>
+            clique aqui
+          </a>
+        </p>
       </div>
 
       <div className="section-2">
