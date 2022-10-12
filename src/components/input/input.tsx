@@ -3,12 +3,14 @@ interface Props {
   Type?: string;
   icon?: string;
   Value?: string;
+  onChange?: any;
+  lengthteste?: number;
 }
 
-function Input({ label, Type, icon, Value }: Props) {
+function Input({ label, Type, icon, Value, lengthteste }: Props) {
   return (
     <div className="wrapper-input">
-      <input className="input" type={Type} id="user" placeholder={label} value={Value}/>
+      <input minLength={lengthteste} className="input" type={Type} placeholder={label} value={Value}/>
       <i className={icon} />
     </div>
   );
